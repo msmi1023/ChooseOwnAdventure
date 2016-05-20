@@ -42,6 +42,56 @@ void bar(){
 	} while (!controlFlag);
 	
 }
+void hooliganLanes(){
+	int controlFlag = 0;
+	
+	do {
+		printf("You have a great time in the lanes, but the march is about to start.\n");
+		printf("Do you: \n");
+		printf("1. Crush you beer and catch up with the march? or \n");
+		printf("2. Enjoy your tasty brew and just walk to the match on your own? \n");
+		printf("Please enter your choice: ");
+		char enteredChoice = readInput();
+		
+		if(enteredChoice == '1') {
+			controlFlag = 1;
+		}
+		else if (enteredChoice == '2') {
+			controlFlag = 1;
+		}
+		else {
+			printf("Invalid choice, please reconsider:\n");
+		}
+		
+		
+	} while (!controlFlag);
+	
+}
+void hooliganBar(){
+	int controlFlag = 0;
+	
+	do {
+		printf("Great. Let's get drinking.\n");
+		printf("What beer do you want: \n");
+		printf("1. City? or \n");
+		printf("2. Strohs? \n");
+		printf("Please enter your choice: ");
+		char enteredChoice = readInput();
+		
+		if(enteredChoice == '1') {
+			controlFlag = 1;
+		}
+		else if (enteredChoice == '2') {
+			controlFlag = 1;
+		}
+		else {
+			printf("Invalid choice, please reconsider:\n");
+		}
+		
+		
+	} while (!controlFlag);
+	
+}
 // Hooligan Start Point
 void hooligan(){
 	int controlFlag = 0;
@@ -56,9 +106,11 @@ void hooligan(){
 		
 		if(enteredChoice == '1') {
 			controlFlag = 1;
+			hooliganBar();
 		}
 		else if (enteredChoice == '2') {
 			controlFlag = 1;
+			hooliganLanes();
 		}
 		else {
 			printf("Invalid choice, please reconsider:\n");
